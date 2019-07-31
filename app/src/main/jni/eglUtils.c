@@ -122,8 +122,7 @@ void genTexture(GLuint *textureId){
 void blindTexture(GLuint textureId,void* texture,GLsizei texWidth,GLsizei texHeight){
     glBindTexture(GL_TEXTURE_2D,textureId);
     glActiveTexture(GL_TEXTURE_2D);
-   GL_BGRA
-    glTexSubImage2D(GL_TEXTURE_2D,0,0,0,texWidth,texHeight,GL_RGBA,GL_UNSIGNED_BYTE,texture)
+    glTexSubImage2D(GL_TEXTURE_2D,0,0,0,texWidth,texHeight,GL_RGBA,GL_UNSIGNED_BYTE,texture);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, texWidth, texHeight,0,GL_RGBA,GL_UNSIGNED_BYTE,texture);
     glBindTexture(GL_TEXTURE_2D,0);
 
